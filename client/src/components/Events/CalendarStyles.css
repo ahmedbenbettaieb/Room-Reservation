@@ -1,0 +1,35 @@
+/* CalendarStyles.css */
+.react-calendar__tile.event-day {
+    background-color: #FF6961; 
+    color: white;
+  }
+  
+  .react-calendar__tile.event-day:hover {
+    background-color: #FF4C4C; 
+  }
+  
+  .react-calendar__tile {
+    background-color: white; 
+  }
+  
+  
+
+.button-container {
+  display: flex;
+  gap: 8px; /* Space between buttons */
+  flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+}
+
+.button-container button {
+  flex: 1; 
+  
+}
+
+
+
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: column; 
+  }
+}
+

@@ -1,0 +1,10 @@
+@import "variables";
+@import "mixins";
+
+.link-btn{
+    text-decoration: none;
+    color: inherit;
+    &:hover{
+        color: inherit;
+    }
+}

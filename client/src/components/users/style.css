@@ -1,0 +1,13 @@
+/* styles.css */
+.table-bordered {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #dee2e6; /* Adjust the color as needed */
+    padding: 8px; /* Optional: Add padding for better spacing */
+    text-align: left; /* Align text to the left */
+  }
+  
