@@ -1,4 +1,3 @@
-import React from 'react';
 import { useAppDispatch, useAppSelector } from '@/pages/redux/store';
 import { createUser } from '@/pages/redux/allUsers/allUsersSlice';
 import { Button, TextInput, Loader, Select } from '@mantine/core';
@@ -11,7 +10,7 @@ interface CreateUserProps {
 
 export default function CreateUser({ closeModal }: CreateUserProps) {
   const dispatch = useAppDispatch();
-  const { loading, success, error } = useAppSelector((state) => state.allUsers);
+  const { loading } = useAppSelector((state) => state.allUsers);
 
   const form = useForm({
     initialValues: {

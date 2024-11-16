@@ -20,7 +20,16 @@ class WelcomeMail extends Mailable
 
     public function build()
     {
-        return $this->subject('Welcome to Our Platform')
+        try {
+            //code...
+            return $this->subject('Welcome to Our Platform')
                     ->view('emails.welcome');
+
+        } catch (\Throwable $th) {
+            //throw $th;
+            Log::error($th->getMessage());
+            exit;
+        }
+        
     }
 }

@@ -1,12 +1,9 @@
-import React from 'react'
+import Login from "@/components/login/login";
 
-import Login from '@/components/login/login'
-
-export default function 
-() {
+export default function () {
   return (
     <div>
-        <Login />
+      <Login />
     </div>
-  )
+  );
 }

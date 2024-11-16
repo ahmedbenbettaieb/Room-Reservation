@@ -21,7 +21,7 @@ interface Props {
 export default function Menu({ children }: Props) {
   const [opened, { toggle }] = useDisclosure();
   const navigate = useNavigate();
-  const { logout, loading, error } = useLogout();
+  const { logout, error } = useLogout();
 
   const { user } = useAppSelector((state) => state.user);  const handleLogout = async () => {
     await logout();

@@ -1,11 +1,9 @@
 // AppRoutes.tsx
 import React, { lazy, Suspense } from "react";
-import { Outlet, useRoutes } from "react-router-dom";
+import {  useRoutes } from "react-router-dom";
 import CustomLoadingOverlay from "../components/customLoading/CustomLoadingOverlay";
 import { PATH_APP } from "./paths";
-import Menu from "@/pages/Menu/menu";
 import ProtectedRoute from "@/components/protectedRoute/ProtectedRoute";
-import Users from "@/components/users/Users";
 
 const Loadable = (Component: React.FC) => (props: typeof Component.propTypes) => {
   return (

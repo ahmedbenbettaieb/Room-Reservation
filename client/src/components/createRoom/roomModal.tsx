@@ -9,7 +9,7 @@ import { RoomType } from "@/types/roomType";
 import { Button, NumberInput, Textarea, TextInput } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { notifications } from "@mantine/notifications";
-import React, { useEffect } from "react";
+import  { useEffect } from "react";
 
 interface RoomProps {
   room: RoomType | null | undefined;

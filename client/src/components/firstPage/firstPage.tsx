@@ -1,7 +1,7 @@
 import Menu from '@/pages/Menu/menu'
 import { fetchAllUsers } from '@/pages/redux/allUsers/allUsersSlice';
 import { useAppDispatch, useAppSelector } from '@/pages/redux/store'
-import React, { useEffect } from 'react'
+import  { useEffect } from 'react'
 
 export default function FirstPage() {
   const { user } = useAppSelector((state) => state.user)

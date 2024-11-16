@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import axiosInstance from '@/config/AxiosInstance';
 import { RoomType } from '@/types/roomType';
-import axios from 'axios';
 
 const initialState={
     loading:false,

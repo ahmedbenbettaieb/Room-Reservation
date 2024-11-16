@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { ReservationEvent } from "@/types/evenType";
-import axiosInstance from "@/config/AxiosInstance";
 import Menu from "@/pages/Menu/menu";
 import FullCalendar from "@fullcalendar/react";
 import resourceTimelinePlugin from "@fullcalendar/resource-timeline";
 import { Button, Modal } from "@mantine/core";
-import { RoomType } from "@/types/roomType";
 import { parseISO } from "date-fns";
 
 import "react-calendar/dist/Calendar.css";
@@ -48,7 +46,7 @@ export default function Events() {
     const event = events.find((e) => e.id.toString() === info.event.id);
     if (event) {
       const startDate = parseISO(event.start_date);
-      const endDate = parseISO(event.end_date);
+      // const endDate = parseISO(event.end_date);
 
       setIsUpdated(true);
       setReservationData({

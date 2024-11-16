@@ -1,0 +1,48 @@
+version: '4.35'
+
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    environment:
+      DB_HOST: db
+      DB_DATABASE: room_reserve
+      DB_userr2NAME: userr2
+      DB_PASSWORD: userr2
+    ports:
+      - 8000:8000
+    volumes:
+      - ./server:/app
+    depends_on:
+      - db
+    networks:
+      - app
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    tty: true
+    ports:
+      - 5173:5173
+    volumes:
+      - ./client:/src
+    depends_on:
+      - server
+    networks:
+      - app
+
+  db:
+    image: mariadb:10.4.24
+    environment:
+      MYSQL_DATABASE: 'room_reserve'
+      userr2: 'userr2'
+      MYSQL_PASSWORD: 'userr2'
+      MYSQL_userr2_PASSWORD: 'userr2'
+    networks:
+      - app
+
+networks:
+  app:
+    driver: bridge

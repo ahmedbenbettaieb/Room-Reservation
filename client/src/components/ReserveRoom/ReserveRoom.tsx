@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Button, MultiSelect, Select, Textarea, TextInput } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { DateInput, TimeInput } from '@mantine/dates';
@@ -28,7 +28,7 @@ interface ReserveRoomProps {
   };
 }
 
-const ReserveRoom = ({ room, allRooms, closeModal, isUpdated, reservationData }: ReserveRoomProps) => {
+const ReserveRoom = ({  allRooms, closeModal, isUpdated, reservationData }: ReserveRoomProps) => {
   const dispatch = useAppDispatch();
   const { success, error ,reservationSuccess, updateSuccess} = useAppSelector((state) => state.reservation);
   const {allUsers} = useAppSelector((state) => state.allUsers);
@@ -110,11 +110,11 @@ const ReserveRoom = ({ room, allRooms, closeModal, isUpdated, reservationData }:
 
 
 
-  function userIdToSendToTheUpdateModal() {
-    if (isUpdated && reservationData) {
-      return reservationData.participants?.map((participant) => participant.user_id);
-    }
-  }
+  // function userIdToSendToTheUpdateModal() {
+  //   if (isUpdated && reservationData) {
+  //     return reservationData.participants?.map((participant) => participant.user_id);
+  //   }
+  // }
   console.log("success", success);
 
   useEffect(() => {

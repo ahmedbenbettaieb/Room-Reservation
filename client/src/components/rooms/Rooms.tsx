@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "@/pages/redux/store";
 import { getRooms } from "@/pages/redux/room/roomSlice";
 import Menu from "@/pages/Menu/menu";
 import { Button, Table, Pagination, Modal } from "@mantine/core";
-import { set } from "date-fns";
 import { RoomType } from "@/types/roomType";
 import RoomModal from "../createRoom/roomModal";
 
 export default function Rooms() {
-  const { rooms, loading, error, createSuccess, updateSuccess } =
+  const { rooms } =
     useAppSelector((state) => state.room);
   const dispatch = useAppDispatch();
 

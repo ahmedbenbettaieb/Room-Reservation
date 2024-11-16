@@ -1,12 +1,11 @@
-import Events from '@/components/Events/Events'
-import React from 'react'
+import Events from "@/components/Events/Events";
 
-export default function  EventPage() {
+export default function EventPage() {
   return (
-    <div> EventPage
-
-
+    <div>
+      {" "}
+      EventPage
       <Events />
     </div>
-  )
+  );
 }

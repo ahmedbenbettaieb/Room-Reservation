@@ -1,11 +1,11 @@
-import { AliasOptions, defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { AliasOptions, defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 import tsconfigPaths from "vite-tsconfig-paths";
 
-//@ts-ignore
+// @ts-ignore
 import path from "path";
 
-//@ts-ignore
+// @ts-ignore
 const root = path.resolve(__dirname, "src");
 
 // https://vitejs.dev/config/
@@ -16,4 +16,9 @@ export default defineConfig({
       "@": root,
     } as AliasOptions,
   },
-})
+  server: {
+    host: "0.0.0.0",
+    port: 5173,
+    strictPort: true,
+  },
+});

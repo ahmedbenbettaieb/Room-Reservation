@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "@/pages/redux/store";
 import { fetchAllUsers } from "@/pages/redux/allUsers/allUsersSlice";
 import { Table, Loader, Text, Button, Modal } from "@mantine/core";
@@ -12,7 +12,7 @@ export default function Users() {
     (state) => state.allUsers
   );
   const [modalOpen, setModalOpen] = useState(false);
-  const {user}=useAppSelector((state)=>state.user);
+  // const {user}=useAppSelector((state)=>state.user);
 
   useEffect(() => {
     dispatch(fetchAllUsers());

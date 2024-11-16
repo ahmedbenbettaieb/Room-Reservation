@@ -1,10 +1,9 @@
-import FirstPage from '@/components/firstPage/firstPage'
-import React from 'react'
+import FirstPage from "@/components/firstPage/firstPage";
 
 export default function firstPage() {
   return (
     <div>
-        <FirstPage />
+      <FirstPage />
     </div>
-  )
+  );
 }

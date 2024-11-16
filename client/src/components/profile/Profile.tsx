@@ -1,18 +1,14 @@
-import { useAppDispatch, useAppSelector } from "@/pages/redux/store";
-import { getUserData } from "@/pages/redux/userSlice";
+import {  useAppSelector } from "@/pages/redux/store";
 import { Avatar, Card, Loader, rem, Text } from "@mantine/core";
-import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
   faEnvelope,
   faUserShield,
 } from "@fortawesome/free-solid-svg-icons";
-import Menu from "@/pages/Menu/menu";
 
 export default function Profile() {
   const { user, loading } = useAppSelector((state) => state.user);
-  const dispatch = useAppDispatch();
 
   //   useEffect(() => {
   //     dispatch(getUserData());
