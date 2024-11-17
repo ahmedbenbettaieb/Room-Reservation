@@ -28,6 +28,7 @@ COPY . .
 # Install Laravel project dependencies via Composer
 RUN composer install --no-dev --optimize-autoloader
 
+
 # Set proper permissions for storage and cache directories
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 RUN chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
@@ -35,5 +36,5 @@ RUN chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 # Expose the port Apache is running on
 EXPOSE 80
 
-# Command to run Apache in the foreground
-CMD ["apache2-foreground"]
+# Command to run Laravel's development server
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]

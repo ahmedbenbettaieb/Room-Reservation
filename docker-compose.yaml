@@ -36,12 +36,13 @@ services:
   db:
     image: mariadb:10.4.24
     environment:
-      MYSQL_DATABASE: 'room_reserve'
-      userr2: 'userr2'
-      MYSQL_PASSWORD: 'userr2'
-      MYSQL_userr2_PASSWORD: 'userr2'
+      MYSQL_ROOT_PASSWORD: 'rootpassword'  
+      MYSQL_DATABASE: 'room_reserve'       
+      MYSQL_USER: 'userr2'                 
+      MYSQL_PASSWORD: 'userr2'            
     networks:
       - app
+
 
 networks:
   app:
